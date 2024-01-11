@@ -4,3 +4,4 @@ import * as cellController from '../controllers/cell.controller.js';
 export const cellRouter = Router();
 
 cellRouter.post('/cell/update', cellController.updateListCell);
+cellRouter.get('/cell/get-all', cellController.getListCell);

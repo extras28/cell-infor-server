@@ -39,3 +39,13 @@ export async function updateListCell(req, res) {
     res.status(400).send({ result: 'failed', message: error.message });
   }
 }
+
+export async function getListCell(req, res) {
+  try {
+    const listCell = await cell.find();
+
+    res.status(200).send({ result: 'success', cells: listCell });
+  } catch (error) {
+    res.status(400).send({ result: 'failed', message: error.message });
+  }
+}
